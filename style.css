@@ -1,0 +1,149 @@
+:root {
+  --bg: #f3f8fb;
+  --surface: #ffffff;
+  --text: #1f2937;
+  --muted: #4b5563;
+  --accent: #0071c5;
+  --accent-soft: rgba(0, 113, 197, 0.1);
+  --border: #d1d5db;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 3rem 1.5rem;
+  background: linear-gradient(180deg, #eff6ff 0%, #ffffff 100%);
+}
+
+.logo {
+  width: 120px;
+  max-width: 100%;
+}
+
+.hero-copy h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  letter-spacing: -0.04em;
+}
+
+.hero-copy p {
+  margin: 0;
+  max-width: 46rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+main {
+  padding: 2rem 1.5rem 3rem;
+}
+
+.timeline-section {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.timeline-section h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.intro {
+  margin-top: 0;
+  color: var(--muted);
+}
+
+.timeline {
+  position: relative;
+  margin-top: 2.5rem;
+  padding-left: 1.5rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--accent-soft);
+  border-radius: 999px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 2.5rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-year {
+  position: absolute;
+  left: -0.9rem;
+  top: 0;
+  width: 3.4rem;
+  height: 3.4rem;
+  display: grid;
+  place-items: center;
+  background: var(--surface);
+  border: 3px solid var(--accent);
+  color: var(--accent);
+  border-radius: 50%;
+  font-weight: 700;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.timeline-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.4rem 1.6rem;
+  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.06);
+}
+
+.timeline-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+
+.timeline-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+@media (min-width: 720px) {
+  .timeline {
+    padding-left: 2.5rem;
+  }
+
+  .timeline-item {
+    padding-left: 4rem;
+  }
+
+  .timeline-year {
+    left: -1.4rem;
+  }
+}
